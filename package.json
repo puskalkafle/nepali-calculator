@@ -1,7 +1,14 @@
 {
+  "scripts": {
+    "start": "parcel src/index.html",
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
+  },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.1.0",
     "sass": "^1.46.0",
     "typescript": "^4.5.4"
+  },
+  "dependencies": {
+    "push-dir": "^0.4.1"
   }
 }
