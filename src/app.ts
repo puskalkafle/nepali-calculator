@@ -27,6 +27,7 @@ class Calculator {
     console.log(params);
   }
   getTemplate(): void {
+    let tempExpression: string = "";
     let app = document.getElementById("app");
     let table = document.createElement("table");
     let tr = document.createElement("tr");
@@ -49,9 +50,17 @@ class Calculator {
         // this.value.match(reg) ? result.appendChild(char) : "";
 
         if (this.value === "AC") {
-          document.getElementById("result").innerHTML = "";
-        } else {
+          document.getElementById("result").innerHTML = "0";
+          tempExpression = "";
+        } else if (this.value === "=") {
+          try {
+            document.getElementById("result").innerHTML = eval(tempExpression);
+          } catch (err) {
+            document.getElementById("result").innerHTML = "Error";
+          }
+        } else if (tempExpression.length <= 15) {
           result.appendChild(char);
+          tempExpression = tempExpression.concat(this.value);
         }
       });
 
@@ -88,7 +97,7 @@ let charactersArray = [
   },
   {
     label: "%",
-    value: "%",
+    value: "%*",
   },
   {
     label: "AC",
