@@ -1,0 +1,47 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background: #AEB4C3;
+}
+
+#app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#app .wrap {
+  filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.25));
+  background: #ffffff;
+  border-radius: 15px;
+}
+
+button {
+  width: 80px;
+  height: 80px;
+  background: #FCFCFD;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background: #E1E1EB;
+}
+button.equalTo {
+  background: #5f88e3;
+  color: #ffffff;
+}
+button.equalTo:hover {
+  background: #3368db;
+}
+
+#result {
+  height: 230px;
+  background: #FCFCFD;
+  border-radius: 15px 15px 0 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+  padding: 10px;
+  font-size: 28px;
+  font-weight: 300;
+}
+/*# sourceMappingURL=index.fc9f8515.css.map */
